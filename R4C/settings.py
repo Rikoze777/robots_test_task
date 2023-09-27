@@ -50,7 +50,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'robots.middleware.CustomErrorMiddlaware'
 ]
+
 
 ROOT_URLCONF = 'R4C.urls'
 

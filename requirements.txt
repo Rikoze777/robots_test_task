@@ -1,3 +1,6 @@
 django==3.2
 environs==9.5.0
 Pillow==10.0.0
+jsonschema==4.19.1
+pydantic==2.3.0
+djantic==0.7.0
