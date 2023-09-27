@@ -43,6 +43,6 @@ def get_excel(request):
 
     response = HttpResponse(content=stream,
                             content_type='application/ms-excel', )
-    response['Content-Disposition'] = f'attachment; filename=ExportedExcel-{timezone.now().strftime("%Y%m%d%H%M")}.xlsx'
+    response['Content-Disposition'] = f'attachment; filename=Robots_Report_{timezone.now().strftime("%Y_%m_%d_%H_%M")}.xlsx'
 
     return response
