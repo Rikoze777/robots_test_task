@@ -11,7 +11,7 @@ from django.utils import timezone
 
 
 @csrf_exempt
-@require_http_methods('POST')
+@require_http_methods(['POST'])
 def add_robot(request):
     try:
         robot = json.loads(request.body)
@@ -33,7 +33,7 @@ def map_error_detail(error):
     return ErrorDetail(error['msg'], error['type'])
 
 
-@require_http_methods('GET')
+@require_http_methods(['GET'])
 def get_excel(request):
     wb = create_excel()
     with NamedTemporaryFile() as tmp:
