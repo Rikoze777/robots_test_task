@@ -28,6 +28,16 @@ python3 manage.py makemigrations
     6. EMAIL_HOST_USER='email@yandex.ru' `Ваша почта`
     7. EMAIL_HOST_PASSWORD='password' `Созданный сервисом пароль`
 
+## Развертывание с помощью Docker
+-убедитесь в наличии .env и requirements.txt в корне проекта, после выполните команду
+```bash
+docker-compose up --build
+```
+-Для создания суперпользователя выполните команду, где container_name это название вашего контейнера:
+```bash
+docker exec -it container_name python manage.py createsuperuser
+```
+
  ## Запуск
 
  - Запустите приложение
